@@ -8,6 +8,22 @@
   </head>
   <body>
     <main>
+      <audio id="background-music" src="assets/wedding-song.mp3" loop></audio>
+      <button id="music-toggle-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M8 5v14l11-7z"></path>
+          <path d="M0 0h24v24H0z" fill="none"></path>
+        </svg>
+      </button>
+
+      <!-- ==================================================================== -->
+
       <section class="splash-screen">
         <div class="container flex-splash relative">
           <div class="guest-name-wrapper">
@@ -354,27 +370,10 @@
                 alt=""
               />
             </div>
+            <div class="big-block"></div>
             <h3>Waktu</h3>
             <h3 class="waktu-h3">07.30 - 08.30 WIB</h3>
-            <div class="button-wrapper">
-              <a
-                id="google-calendar-link"
-                href="#"
-                target="_blank"
-                class="calendar-button"
-                >Google</a
-              >
-              <a
-                id="outlook-calendar-link"
-                href="#"
-                target="_blank"
-                class="calendar-button"
-                >Outlook</a
-              >
-              <a id="apple-calendar-link" href="#" class="calendar-button"
-                >Apple / Other</a
-              >
-            </div>
+
             <!-- ============================ -->
           </div>
         </div>
@@ -410,18 +409,30 @@
                 alt=""
               />
             </div>
+            <div class="big-block"></div>
             <h3>Waktu</h3>
             <p></p>
             <h3 class="waktu-h3">09.00 - 14.00 WIB</h3>
-            <div class="button-wrapper">
-              <a
-                href=""
-                id="addToCalendar"
-                class="calendar-button accent-button"
-                >Tambahkan ke Kalender</a
-              >
-            </div>
           </div>
+          <div class="button-wrapper">
+            <a
+              id="google-calendar-link"
+              target="_blank"
+              class="calendar-button accent-button"
+              >Tambahkan di Google Calendar</a
+            >
+            <!-- <a
+              id="outlook-calendar-link"
+              href="#"
+              target="_blank"
+              class="calendar-button"
+              >Outlook</a
+            > -->
+            <a id="apple-calendar-link" class="calendar-button"
+              >Tambahkan di Apple Calendar</a
+            >
+          </div>
+          <div class="big-block"></div>
         </div>
       </section>
 
@@ -469,7 +480,6 @@
       </section>
 
       <section class="adab-walimah">
-        <!-- <div class="medium-block"></div> -->
         <div class="container container-adab">
           <div class="title-wrapper">
             <svg
@@ -487,7 +497,7 @@
               />
             </svg>
 
-            <h2 class="date-h2 adab-text-title">Adab Menghadiri Walimah</h2>
+            <h2 class="adab-text-title">Adab Menghadiri Walimah</h2>
           </div>
           <div class="big-block"></div>
           <div class="wrapper box-style relative wrapper-adab-text">
@@ -531,14 +541,6 @@
             <h2 class="adab-text">
               Hindari Ikhtilat (Bercampur dengan lawan jenis)
             </h2>
-          </div>
-          <div class="wrapper box-style relative wrapper-adab-text">
-            <img
-              src="./images/adab-walimah/no-smoking.webp"
-              alt=""
-              class="decor-adab-text"
-            />
-            <h2 class="adab-text">Dilarang Merokok</h2>
           </div>
           <div class="wrapper box-style relative wrapper-adab-text">
             <img

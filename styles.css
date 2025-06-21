@@ -21,6 +21,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* 3. Allow percentage-based heights in the application */
@@ -144,7 +145,7 @@ section {
 }
 
 .arabic-text {
-  text-align: right;
+  text-align: center;
   line-height: 2;
   font-family: "Amiri", serif;
   font-weight: 400;
@@ -279,12 +280,12 @@ section {
 }
 
 .nama-arab {
-  max-width: 5rem;
+  max-width: 3rem;
   margin: 0 auto;
 }
 
 .arab-groom {
-  max-width: 3.5rem;
+  max-width: 2rem;
 }
 
 .name-of-bride {
@@ -338,14 +339,14 @@ section {
 
 .date-image {
   position: absolute;
-  top: -5rem;
+  top: -3rem;
   transform: translateX(-40%);
   max-width: 7rem;
 }
 
 .clock-image {
   position: absolute;
-  top: -5rem;
+  top: -3rem;
   right: 0%;
   transform: translateX(30%);
   max-width: 7rem;
@@ -375,13 +376,20 @@ section {
 
 .wrapper-date {
   padding-top: 3rem;
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 
 .date-h2 {
   font-family: "Jakarta sans", sans-serif;
-  font: weight 800;
-  font-size: 3rem;
+  font-weight: 300;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.adab-text-title {
+  font-family: "Jakarta sans", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
 }
 
 .tanggal-h3 {
@@ -431,10 +439,6 @@ section {
 
 .adab-walimah {
   background-color: var(--pink-3);
-}
-
-.adab-text-title {
-  font-weight: 300;
 }
 
 .adab-text {
@@ -627,6 +631,34 @@ section {
   bottom: 38%;
   right: 20%;
 }
+
+#music-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#music-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+#music-toggle-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
 @media screen and (min-width: 280px) {
   /* .box-style {
     padding: 3rem 1.5rem;

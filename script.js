@@ -8,30 +8,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Use 'YYYY-MM-DDTHH:MM:SS' format for your local time
     startTime: new Date("2025-07-13T07:30:00"),
     endTime: new Date("2025-07-13T14:00:00"),
-    title: "Wedding: Jane & John",
+    title: "Walimatul 'Urs Fahmi & Fidia",
     description:
-      "Join us for the celebration of our marriage! Dress code: Formal.",
-    location: "The Grand Ballroom, Jakarta, Indonesia",
+      "Bismillah, Mohon berkenan untuk mengikuti Adab Walimah 'Urs. ",
+    location:
+      "Masjid Asmaul Husna Gading Serpong, Kelapa Dua, Tangerang, Banten",
   };
 
   // =========================================================================
   // SECTION 2: MUSIC PLAYER
   // =========================================================================
-  // const music = document.getElementById("background-music");
-  // const toggleBtn = document.getElementById("music-toggle-btn");
-  // const playIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>`;
-  // const pauseIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>`;
-  // music.volume = 0.3; // Set initial volume
+  const music = document.getElementById("background-music");
+  const toggleBtn = document.getElementById("music-toggle-btn");
+  const playIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>`;
+  const pauseIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>`;
+  music.volume = 0.3; // Set initial volume
 
-  // toggleBtn.addEventListener("click", () => {
-  //   if (music.paused) {
-  //     music.play();
-  //     toggleBtn.innerHTML = pauseIcon;
-  //   } else {
-  //     music.pause();
-  //     toggleBtn.innerHTML = playIcon;
-  //   }
-  // });
+  toggleBtn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      toggleBtn.innerHTML = pauseIcon;
+    } else {
+      music.pause();
+      toggleBtn.innerHTML = playIcon;
+    }
+  });
 
   // =========================================================================
   // SECTION 3: ADD TO CALENDAR LINKS
