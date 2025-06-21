@@ -20,9 +20,35 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // =========================================================================
   const music = document.getElementById("background-music");
   const toggleBtn = document.getElementById("music-toggle-btn");
+  const guestBtn = document.getElementById("guess-button");
   const playIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>`;
   const pauseIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>`;
   music.volume = 0.3; // Set initial volume
+  const tl_splash = gsap.timeline({
+    defaults: {
+      ease: "power2.out",
+      duration: 2,
+      stagger: {
+        each: 0.2,
+      },
+      onComplete: () => {
+        music.play();
+        // toggleBtn.innerHTML = pauseIcon;
+      },
+    },
+  });
+  guestBtn.addEventListener("click", () => {
+    tl_splash
+      .to(".curtain", {
+        y: "100%",
+      })
+      .to(".splash-screen", {
+        display: "none",
+      })
+      .to(".curtain", {
+        y: "0%",
+      });
+  });
 
   toggleBtn.addEventListener("click", () => {
     if (music.paused) {
@@ -54,24 +80,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     return `${baseUrl}&${params.toString()}`;
   }
 
-  function createOutlookLink(details) {
-    const baseUrl = "https://outlook.live.com/calendar/0/deeplink/compose?";
-    const params = new URLSearchParams({
-      path: "/calendar/action/compose",
-      rru: "addevent",
-      subject: details.title,
-      body: details.description,
-      location: details.location,
-      startdt: details.startTime.toISOString(),
-      enddt: details.endTime.toISOString(),
-    });
-    return `${baseUrl}&${params.toString()}`;
-  }
-
   document.getElementById("google-calendar-link").href =
     createGoogleLink(eventDetails);
-  document.getElementById("outlook-calendar-link").href =
-    createOutlookLink(eventDetails);
 
   const appleLink = document.getElementById("apple-calendar-link");
   appleLink.addEventListener("click", (event) => {

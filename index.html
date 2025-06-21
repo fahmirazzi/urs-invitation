@@ -4,14 +4,13 @@
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fahmi & Fidia | Walimatul 'Urs</title>
   </head>
   <body>
     <main>
       <audio
         id="background-music"
         src="./assets/wedding-music.mp3"
-        autoplay
         loop
       ></audio>
       <button id="music-toggle-btn">
@@ -27,7 +26,12 @@
       </button>
 
       <!-- ==================================================================== -->
-
+      <div class="curtain-wrapper">
+        <div class="curtain curtain-1"></div>
+        <div class="curtain curtain-2"></div>
+        <div class="curtain curtain-3"></div>
+        <div class="curtain curtain-4"></div>
+      </div>
       <section class="splash-screen">
         <div class="container flex-splash relative">
           <div class="guest-name-wrapper">
@@ -76,9 +80,9 @@
 
           <div class="medium-block"></div>
           <a
+            href="#opening-section"
+            id="guess-button"
             class="calendar-button guest-button"
-            target="_blank"
-            rel="noopener noreferrer"
             >Buka Undangan</a
           >
           <!-- ==================decor================== -->
@@ -119,7 +123,7 @@
           </svg>
         </div>
       </section>
-      <section class="opening">
+      <section class="opening" id="opening-section">
         <div class="container relative">
           <div class="wrapper flex-wrapper">
             <img src="./images/bismillah.png" alt="" class="image-bismillah" />

@@ -4,10 +4,12 @@
   --black-color: #333;
   --blue-1: #c8d3e5;
   --blue-2: #2cb2c6;
+  --blue-3: #7db9c9;
   --pink-1: #e5a2c0;
   --pink-2: #f1c0c3;
   --pink-3: #fdeeee;
   --pink-4: #e5c5cf;
+  --pink-5: #f1b2b4;
 }
 
 /* 1. Use a more intuitive box-sizing model. */
@@ -542,6 +544,38 @@ section {
 
 .splash-screen {
   background-color: var(--pink-4);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+}
+
+.curtain-wrapper {
+  position: fixed;
+  top: -100%;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: stretch;
+}
+
+.curtain {
+  width: 25%;
+}
+
+.curtain-1 {
+  background-color: var(--pink-5);
+}
+.curtain-2 {
+  background-color: var(--pink-1);
+}
+.curtain-3 {
+  background-color: var(--blue-2);
+}
+.curtain-4 {
+  background-color: var(--blue-3);
 }
 
 .flex-splash {
