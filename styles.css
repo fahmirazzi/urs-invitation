@@ -1,0 +1,628 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+:root {
+  --white-color: #fdfdfd;
+  --black-color: #333;
+  --blue-1: #c8d3e5;
+  --blue-2: #2cb2c6;
+  --pink-1: #e5a2c0;
+  --pink-2: #f1c0c3;
+  --pink-3: #fdeeee;
+  --pink-4: #e5c5cf;
+}
+
+/* 1. Use a more intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin and padding on everything. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+  font-size: clamp(0.5rem, 0.6rem + 1vw, 1rem);
+}
+
+/*
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  text-align: center;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h2,
+h3 {
+  font-family: "ABeeZee", sans-serif;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+/* 9. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 10. Smooth scrolling on the page */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 1rem 1rem;
+  overflow: hidden;
+  /* min-height: 100vh; */
+}
+
+.wrapper {
+  margin: 2rem 0;
+}
+
+.margin-wrapper {
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.relative {
+  position: relative;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.box-style {
+  position: relative;
+  background-color: white;
+  padding: 3rem 2rem;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.opening {
+  background-color: var(--blue-1, #c8d3e5);
+}
+
+.image-bismillah {
+  margin: 0 auto;
+  max-width: 10rem;
+}
+
+.arabic-text {
+  text-align: right;
+  line-height: 2;
+  font-family: "Amiri", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bismillah-text {
+  font-style: italic;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 200;
+}
+
+.ayat-wrapper {
+}
+
+/* Surah Name  */
+
+.surah-name-wrapper {
+  display: flex;
+  margin-top: 2rem;
+  padding: 1rem;
+  min-height: 2rem;
+  position: relative;
+  /* background-color: red; */
+}
+
+.draw-surah-name {
+  position: absolute;
+  min-width: 40%;
+  min-height: 110%;
+  top: 0%;
+  left: 0;
+  transform: translateX(-10%);
+}
+
+.quran-image {
+  position: absolute;
+  bottom: -15%;
+  right: 0;
+  height: 10rem;
+}
+
+.opening-text {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.salam-wrapper {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.salam-image {
+  max-width: 15rem;
+}
+
+.line-salam {
+  width: 5rem;
+  height: 1.5px;
+  background-color: black;
+}
+
+.bouqet {
+  position: absolute;
+  max-width: 15rem;
+  bottom: -6rem;
+}
+
+.left-bouqet {
+  left: -5rem;
+}
+
+.right-bouqet {
+  right: -5rem;
+  transform: rotate(-40deg);
+}
+
+/* section groom and bride */
+
+.bride {
+  background-color: var(--pink-1);
+  position: relative;
+  z-index: -5;
+}
+
+.bride-wrapper {
+  width: 100%;
+  margin: 8rem 0;
+  padding: 2.5rem 1.5rem;
+  /* padding-right: 4rem; */
+}
+
+.groom-wrapper {
+  width: 100%;
+  margin: 8rem 0;
+  padding: 2.5rem 1.5rem;
+  margin-left: auto;
+}
+
+.decor {
+  position: absolute;
+}
+
+.bride-decor {
+  bottom: -2rem;
+  right: -3rem;
+  max-width: 8em;
+}
+
+.bride-avatar {
+  top: -3rem;
+  right: -6rem;
+  max-width: 10em;
+  z-index: -1;
+}
+
+.groom-decor {
+  bottom: -3rem;
+  left: -4rem;
+}
+
+.groom-avatar {
+  top: -5rem;
+  left: -6rem;
+  z-index: 0;
+  max-width: 11em;
+}
+
+.nama-arab {
+  max-width: 5rem;
+  margin: 0 auto;
+}
+
+.arab-groom {
+  max-width: 3.5rem;
+}
+
+.name-of-bride {
+  font-size: 2.5rem;
+}
+
+.groom {
+  background-color: var(--blue-2);
+}
+
+.blob {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  z-index: -10;
+}
+
+.blob-1 {
+  top: -3rem;
+  left: -5rem;
+}
+
+.blob-2 {
+  bottom: 1rem;
+  right: -4rem;
+}
+
+.blob-3 {
+  bottom: 1rem;
+  left: -4rem;
+}
+
+.blob-4 {
+  top: 1rem;
+  right: -5rem;
+}
+
+.blob-5 {
+  bottom: -5rem;
+  right: -10rem;
+}
+
+.blob-6 {
+  bottom: 2rem;
+  left: -10rem;
+}
+
+.date-section {
+  background-color: var(--pink-3);
+}
+
+.date-image {
+  position: absolute;
+  top: -5rem;
+  transform: translateX(-40%);
+  max-width: 10rem;
+}
+
+.clock-image {
+  position: absolute;
+  top: -5rem;
+  right: 0%;
+  transform: translateX(30%);
+  max-width: 10rem;
+}
+
+.ahad-svg {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tanggal-svg {
+  position: absolute;
+  bottom: -80%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 15rem;
+}
+
+.hijri-date {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wrapper-date {
+  padding-top: 3rem;
+  margin-top: 7rem;
+}
+
+.date-h2 {
+  font-family: "Jakarta sans", sans-serif;
+  font: weight 800;
+  font-size: 3rem;
+}
+
+.tanggal-h3 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.venue-text {
+  margin-bottom: 1rem;
+}
+
+.waktu-h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.venue {
+  background-color: var(--blue-1);
+}
+
+.venue-wrapper {
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+}
+
+.venue-image {
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 10rem;
+}
+
+.images-grid-wrapper {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  position: absolute;
+  bottom: -8rem;
+  left: 0;
+}
+
+.venue-image-grid {
+  max-width: 13rem;
+}
+
+.adab-walimah {
+  background-color: var(--pink-3);
+}
+
+.adab-text-title {
+  font-weight: 300;
+}
+
+.adab-text {
+  /* font-family: ''; */
+  font-weight: 300;
+}
+
+.title-decor {
+  max-width: 5rem;
+}
+
+.wrapper-adab-text {
+  text-align: left;
+  padding: 1.5rem 1rem;
+  border-radius: 20px;
+}
+
+.decor-adab-text {
+  max-width: 3.5rem;
+  position: absolute;
+  right: -2rem;
+  top: -30%;
+  z-index: 10;
+}
+
+/* ================================================ */
+
+/* A little extra for your project */
+
+.button-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.calendar-button {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: var(--pink-2);
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 2px solid black;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accent-button {
+  background-color: var(--blue-1);
+}
+
+.calendar-button:hover {
+  background-color: #357abd;
+}
+
+.small-block {
+  height: 0.5rem;
+}
+
+.medium-block {
+  height: 4rem;
+}
+
+.big-block {
+  height: 2.5rem;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.closing {
+  background-color: var(--pink-3);
+}
+
+.wrapper-closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.decor-closing {
+  position: absolute;
+}
+
+.decor-closing-1 {
+  left: 4rem;
+  bottom: 10rem;
+}
+
+.decor-closing-2 {
+  right: 3rem;
+  bottom: 5rem;
+}
+
+/* ===================================== */
+
+.splash-screen {
+  background-color: var(--pink-4);
+}
+
+.flex-splash {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.circle-with-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  border-radius: 100%;
+  max-width: 70%;
+  aspect-ratio: 1/1;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.name-of-bride {
+  font-family: "ABeeZee", sans-serif;
+  font-size: 3rem;
+}
+
+.margin-left-min {
+  margin-left: -8rem;
+}
+
+.margin-right-min {
+  margin-right: -8rem;
+}
+
+.guest-button {
+  margin-bottom: 2rem;
+}
+
+.date-guest {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: lighter;
+}
+
+.decor-splash {
+  position: absolute;
+}
+
+.splash-1 {
+  max-width: 10rem;
+  top: 0%;
+  left: -5rem;
+}
+
+.splash-2 {
+  bottom: 0%;
+  right: -6rem;
+}
+
+.splash-3-circle {
+  max-width: 110%;
+  max-height: 110%;
+}
+
+@media screen and (min-width: 280px) {
+  /* .box-style {
+    padding: 3rem 1.5rem;
+  } */
+
+  .container {
+    padding: 1rem 2rem;
+  }
+
+  .container-adab {
+    padding: 3rem;
+  }
+
+  .bride-wrapper,
+  .groom-wrapper {
+    width: 85%;
+  }
+}
