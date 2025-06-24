@@ -518,6 +518,12 @@ section {
 }
 
 .closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100dvh;
   background-color: var(--pink-3);
 }
 

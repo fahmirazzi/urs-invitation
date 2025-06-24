@@ -97,6 +97,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
       y: 100,
       duration: 1,
       ease: "power4.inOut",
+    }).to(element, {
+      y: 10,
+      yoyo: true,
+      repeat: -1,
+      duration: 1.5,
+      ease: "none",
     });
     createScrollTrigger(element, tl);
   });
@@ -116,6 +122,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
     );
     createScrollTrigger(element, tl);
   });
+
+  const venue_img = document.querySelectorAll(".animate-venue");
+  // const venue_wrapper = document.querySelector(".image-grid-wrapper");
+
+  let venue_tl = gsap.timeline({
+    paused: true,
+    scrollTrigger: {
+      trigger: ".images-grid-wrapper",
+      // markers: true,
+      start: "top 60%",
+    },
+  });
+
+  venue_tl.from(venue_img, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "power2.inOut",
+    stagger: { each: 0.2 },
+  });
+
+  // createScrollTrigger(venue_wrapper, venue_tl);
 
   toggleBtn.addEventListener("click", () => {
     if (music.paused) {
