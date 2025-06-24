@@ -46,6 +46,10 @@ body {
   text-align: center;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* 6. Improve media defaults */
 img,
 picture,
@@ -178,10 +182,11 @@ section {
 
 .draw-surah-name {
   position: absolute;
-  min-width: 40%;
-  min-height: 110%;
-  top: 0%;
-  left: 0;
+  /* min-width: 50%;
+  min-height: 130%; */
+  scale: 1.7;
+  top: 10%;
+  left: 10%;
   transform: translateX(-10%);
 }
 
@@ -449,6 +454,7 @@ section {
 }
 
 .title-decor {
+  animation: spin-right 15s linear infinite;
   max-width: 5rem;
 }
 
@@ -623,11 +629,11 @@ section {
 }
 
 .margin-left-min {
-  margin-left: -8rem;
+  margin-left: -10rem;
 }
 
 .margin-right-min {
-  margin-right: -8rem;
+  margin-right: -12rem;
 }
 
 .guest-button {
@@ -666,19 +672,19 @@ section {
   max-width: 10rem;
   top: 0%;
   left: -5rem;
-  animation: spin-right 30s linear infinite;
+  animation: spin-right 25s linear infinite;
 }
 
 .splash-2 {
   bottom: 0%;
   right: -6rem;
-  animation: spin-left 30s linear infinite;
+  animation: spin-left 25s linear infinite;
 }
 
 .splash-3-circle {
   max-width: 105%;
   max-height: 105%;
-  animation: spin-left 20s linear infinite;
+  animation: spin-left 15s linear infinite;
 }
 
 .nama-arab-splash {

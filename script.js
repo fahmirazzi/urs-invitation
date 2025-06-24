@@ -1,6 +1,26 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger, SplitText);
-  // gsap code here!
+
+  // 1. Get the full URL's query string (everything after '?')
+  const queryString = window.location.search;
+
+  // 2. Create a special object to easily handle the URL parameters
+  const urlParams = new URLSearchParams(queryString);
+
+  // 3. Get the value of the specific parameter named 'guest'
+  // For a URL like "?guest=1234", this will be "1234"
+  const guestIdFromUrl = urlParams.get("guest");
+  const guestNameElement = document.getElementById("guest-name-placeholder");
+
+  if (guestIdFromUrl) {
+    console.log("Found Guest ID in URL:", guestIdFromUrl);
+
+    const foundGuest = guests.find((guest) => guest.id === guestIdFromUrl);
+
+    if (foundGuest) {
+      guestNameElement.textContent = foundGuest.name;
+    }
+  }
 
   // ================================================================================
 
