@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const tl_splash = gsap.timeline({
     defaults: {
       ease: "power2.out",
-      duration: 2,
+      duration: 1,
       stagger: {
         each: 0.2,
       },
@@ -37,17 +37,84 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
     },
   });
+
+  //=================================================================//
+  //BUTTON SPLASH SCREEN
+  //================================================================
   guestBtn.addEventListener("click", () => {
+    guestBtn.disabled = true;
     tl_splash
       .to(".curtain", {
         y: "100%",
       })
       .to(".splash-screen", {
         display: "none",
+        duration: 1,
       })
       .to(".curtain", {
         y: "0%",
-      });
+      })
+      .fromTo(
+        "#doodle-oval",
+        { drawSVG: "0%" },
+        {
+          drawSVG: "100%",
+          duration: 1.5,
+          ease: "power1.inOut",
+        }
+      );
+  });
+
+  //=========================================================================================
+  // SCROLL TRIGGER
+  //=========================================================================================
+
+  function createScrollTrigger(element, timeline) {
+    ScrollTrigger.create({
+      trigger: element,
+      start: "top bottom",
+      onLeaveBack: () => {
+        timeline.progress(0);
+        timeline.pause();
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: element,
+      start: "top 80%",
+      // end: "bottom 20%",
+      // markers: true,
+      onEnter: () => timeline.play(),
+    });
+  }
+
+  document.querySelectorAll(".animate-3d").forEach((element) => {
+    let tl = gsap.timeline({ paused: true });
+
+    tl.from(element, {
+      scale: 0.2,
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      ease: "power4.inOut",
+    });
+    createScrollTrigger(element, tl);
+  });
+
+  document.querySelectorAll(".draw-this").forEach((element) => {
+    let tl = gsap.timeline({ paused: true });
+
+    tl.fromTo(
+      element,
+      { drawSVG: "0%" },
+      {
+        drawSVG: "100%",
+        duration: 2,
+        ease: "power2.inOut",
+        stagger: 0.2,
+      }
+    );
+    createScrollTrigger(element, tl);
   });
 
   toggleBtn.addEventListener("click", () => {
