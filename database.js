@@ -127,7 +127,7 @@ const guests = [
   },
   {
     id: "cpp022",
-    name: "Ahmad Faisal PDAM",
+    name: "Achmad Faisal Faiq PDAM",
     family: "Groom",
     association: "Teman PDAM",
   },
