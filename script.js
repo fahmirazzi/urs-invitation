@@ -19,6 +19,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if (foundGuest) {
       guestNameElement.textContent = foundGuest.name;
+      document.getElementById("guest_id").value = foundGuest.id;
+      document.getElementById("family").value = foundGuest.family;
+      document.getElementById("association").value = foundGuest.association;
+
+      // For convenience, let's also pre-fill the visible name field for the user
+      document.getElementById("name").value = foundGuest.name;
     }
   }
 
@@ -228,10 +234,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // =========================================================================
   // SECTION 4: RSVP Form
   // =========================================================================
-  // The URL you copied from your Google Apps Script deployment
-  const RSVP_API_URL =
-    "https://script.google.com/macros/s/AKfycbyrbxqieN1LgQk9Hb0PhHaxMEt1ANOaWem98BDV_X2g-Cp2EKj_UHFQtC0bAQZKdt_XUg/exec"; // Replace with your actual URL
 
+  // ... the rest of your script, including the RSVP submission part...
+
+  const RSVP_API_URL =
+    "https://script.google.com/macros/s/AKfycbx6jioZUQhfIW5-xw0nU1zFfuieuwqEPG4F3KXmUR8a7GN7ktj7lSkgSwVw9kCygEeZ/exec";
   // Get the form element
   const rsvpForm = document.getElementById("rsvpForm");
 
@@ -247,7 +254,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Get the form data
     const formData = new FormData(event.target);
     const formValues = Object.fromEntries(formData.entries());
-    console.log("Form Values:", formValues);
 
     try {
       // Send the data to your Google Apps Script
@@ -262,12 +268,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
 
       const data = await response.json();
-      console.log("Response from Google Apps Script:", data);
 
       if (data.result === "success") {
         // Display a success message
         rsvpForm.innerHTML =
-          '<p class="success-message">Jazakumullah Khairan untuk RSVP</p>';
+          '<p class="success-message">Jazakumullah Khairan atas waktunya mengisi form RSVP</p>';
       } else {
         // Display an error message
         rsvpForm.innerHTML =
