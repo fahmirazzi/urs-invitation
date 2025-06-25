@@ -226,49 +226,63 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   // =========================================================================
-  // SECTION 4: GSAP ANIMATIONS
+  // SECTION 4: RSVP Form
   // =========================================================================
+  // The URL you copied from your Google Apps Script deployment
+  const RSVP_API_URL =
+    "https://script.google.com/macros/s/AKfycbyrbxqieN1LgQk9Hb0PhHaxMEt1ANOaWem98BDV_X2g-Cp2EKj_UHFQtC0bAQZKdt_XUg/exec"; // Replace with your actual URL
 
-  // --- Initial Page Load Animations ---
-  // gsap.from(".main-title", {
-  //   duration: 1,
-  //   y: -50,
-  //   opacity: 0,
-  //   ease: "power2.out",
-  // });
-  // gsap.from(".tagline", {
-  //   duration: 1,
-  //   y: -30,
-  //   opacity: 0,
-  //   ease: "power2.out",
-  //   delay: 0.3,
-  // });
-  // gsap.from(".calendar-links", { duration: 1, opacity: 0, delay: 0.6 });
+  // Get the form element
+  const rsvpForm = document.getElementById("rsvpForm");
 
-  // // --- Scroll-Triggered Animations ---
-  // gsap.from(".story-heading, .story-text", {
-  //   scrollTrigger: {
-  //     trigger: ".details",
-  //     start: "top 80%",
-  //     toggleActions: "play none none none",
-  //     markers: true, // REMOVE FOR PRODUCTION
-  //   },
-  //   duration: 1.5,
-  //   y: 100,
-  //   opacity: 0,
-  //   stagger: 0.3,
-  //   ease: "power3.out",
-  // });
+  // Add an event listener for form submissions
+  rsvpForm.addEventListener("submit", async (event) => {
+    event.preventDefault(); // Prevent the default form submission
 
-  // gsap.from("#heart-path", {
-  //   scrollTrigger: {
-  //     trigger: "#heart-svg",
-  //     start: "top center",
-  //     end: "bottom center",
-  //     scrub: 1,
-  //     markers: true, // REMOVE FOR PRODUCTION
-  //   },
-  //   drawSVG: "0%",
-  //   ease: "none",
-  // });
+    // Disable the button to prevent multiple submissions
+    const submitButton = event.target.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    // Get the form data
+    const formData = new FormData(event.target);
+    const formValues = Object.fromEntries(formData.entries());
+    console.log("Form Values:", formValues);
+
+    try {
+      // Send the data to your Google Apps Script
+      const response = await fetch(RSVP_API_URL, {
+        method: "POST",
+        // Google Apps Script doPost() function gets parameters in e.parameter, not in the body
+        // We need to construct the URL-encoded string manually
+        body: new URLSearchParams(formValues),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded", // Important for Google Apps Script
+        },
+      });
+
+      const data = await response.json();
+      console.log("Response from Google Apps Script:", data);
+
+      if (data.result === "success") {
+        // Display a success message
+        rsvpForm.innerHTML =
+          '<p class="success-message">Thank you for your RSVP!</p>';
+      } else {
+        // Display an error message
+        rsvpForm.innerHTML =
+          '<p class="error-message">Sorry, there was an error submitting your RSVP. Please try again later.</p>';
+        console.error("Error submitting RSVP:", data.error);
+        submitButton.disabled = false; // Re-enable the button
+        submitButton.textContent = "Send RSVP"; // Restore button text
+      }
+    } catch (error) {
+      // Handle network errors
+      rsvpForm.innerHTML =
+        '<p class="error-message">Sorry, there was a network error. Please check your internet connection and try again.</p>';
+      console.error("Network error:", error);
+      submitButton.disabled = false; // Re-enable the button
+      submitButton.textContent = "Send RSVP"; // Restore button text
+    }
+  });
 });

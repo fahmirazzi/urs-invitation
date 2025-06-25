@@ -35,7 +35,7 @@
       <section class="splash-screen">
         <div class="container flex-splash relative">
           <div class="guest-name-wrapper">
-            <p>Kpd Bpk/Ibu/Saudara/i</p>
+            <p>Kpd Yang Terhormat,</p>
 
             <h2 id="guest-name-placeholder">Tamu Undangan</h2>
 
@@ -734,15 +734,30 @@
         </div>
         <div class="medium-block"></div>
       </section>
-      <!-- <h1>Our Wedding</h1>
-      <p>We're getting married!</p>
 
-      <div id="countdown">
-        <span id="days"></span> Days <span id="hours"></span> Hours
-        <span id="minutes"></span> Minutes <span id="seconds"></span> Seconds
-      </div>
+      <section id="rsvp-form">
+        <div class="container">
+          <h2 class="adab-text-title">Form Kehadiran (RSVP)</h2>
+          <div class="small-block"></div>
+          <form id="rsvpForm">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" required />
 
-      <a href="#" id="addToCalendar" class="calendar-button">Add to Calendar</a> -->
+            <label for="attendance">Apakah Anda akan hadir ?</label>
+            <select id="attendance" name="attendance" required>
+              <option value="Yes">Insyaa Allah, Saya akan hadir</option>
+              <option value="No">Qaddarallah, Saya berhalangan</option>
+            </select>
+
+            <label for="message">Pesan atau Do'a (Opsional):</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button class="calendar-button" type="submit">
+              Kirim Form RSVP
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
