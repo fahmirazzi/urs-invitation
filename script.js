@@ -61,8 +61,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //=================================================================//
   //BUTTON SPLASH SCREEN
   //================================================================
-  guestBtn.addEventListener("click", () => {
+  guestBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    const targetScroll = document.getElementById("opening-section");
+    targetScroll.scrollIntoView({ behavior: "smooth", block: "start" });
+    const bodyElement = document.querySelector("body");
+    bodyElement.classList.remove("no-scroll");
     guestBtn.disabled = true;
+
     tl_splash
       .to(".curtain", {
         y: "100%",
