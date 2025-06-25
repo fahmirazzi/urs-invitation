@@ -267,11 +267,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
       if (data.result === "success") {
         // Display a success message
         rsvpForm.innerHTML =
-          '<p class="success-message">Thank you for your RSVP!</p>';
+          '<p class="success-message">Jazakumullah Khairan untuk RSVP</p>';
       } else {
         // Display an error message
         rsvpForm.innerHTML =
-          '<p class="error-message">Sorry, there was an error submitting your RSVP. Please try again later.</p>';
+          '<p class="error-message">Mohon Maaf, ada kendala saat mengirim Form RSVP</p>';
         console.error("Error submitting RSVP:", data.error);
         submitButton.disabled = false; // Re-enable the button
         submitButton.textContent = "Send RSVP"; // Restore button text
