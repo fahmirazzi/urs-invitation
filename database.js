@@ -685,13 +685,13 @@ const guests = [
   },
   {
     id: "cpp115",
-    name: "Kang Fiqi",
+    name: "Kang Ahmad Arief Rifqy",
     family: "Groom",
     association: "Keluarga",
   },
   {
     id: "cpp116",
-    name: "Teh Nina",
+    name: "Teh Nina Novia Khairina",
     family: "Groom",
     association: "Keluarga",
   },
