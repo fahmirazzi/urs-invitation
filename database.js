@@ -673,7 +673,7 @@ const guests = [
   },
   {
     id: "cpp113",
-    name: "Kang Denny Octaviana dan Keluarga",
+    name: "Kang Denny Octavia Permana Tamvan Rupawan dan Keluarga",
     family: "Groom",
     association: "Keluarga",
   },
