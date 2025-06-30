@@ -973,7 +973,7 @@ const guests = [
   },
   {
     id: "cpp163",
-    name: "Een",
+    name: "Een Amelia",
     family: "Groom",
     association: "Teman SIfa",
   },
