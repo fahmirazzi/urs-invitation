@@ -984,6 +984,12 @@ const guests = [
     association: "Teman Umi",
   },
   {
+    id: "cpp165",
+    name: "Annisa Liandre Marbun",
+    family: "Groom",
+    association: "Teman Fahmi",
+  },
+  {
     id: "cpw001",
     name: "Keluarga Besar Achmad Roedja'i",
     family: "Bride",
