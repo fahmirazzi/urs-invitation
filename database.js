@@ -985,6 +985,12 @@ const guests = [
   },
   {
     id: "cpp165",
+    name: "Annisa Liandre Marbun",
+    family: "Groom",
+    association: "Teman Fahmi",
+  },
+  {
+    id: "cpp166",
     name: "Adinda Siti Latifah",
     family: "Groom",
     association: "Teman Sifa",
