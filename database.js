@@ -984,10 +984,10 @@ const guests = [
     association: "Teman Umi",
   },
   {
-    id: "cpp164",
+    id: "cpp165",
     name: "Adinda Siti Latifah",
     family: "Groom",
-    association: "Teman SIfa",
+    association: "Teman Sifa",
   },
   {
     id: "cpw001",
