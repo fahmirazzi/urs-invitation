@@ -1007,6 +1007,19 @@ const guests = [
     family: "Groom",
     association: "Teman Apa",
   },
+
+  {
+    id: "cpp169",
+    name: "Mas Abu Abdillah Dimas MKS",
+    family: "Groom",
+    association: "MKS",
+  },
+  {
+    id: "cpp170",
+    name: "Mas Rasyid Shidiq MKS",
+    family: "Groom",
+    association: "MKS",
+  },
   {
     id: "cpw001",
     name: "Keluarga Besar Achmad Roedja'i",
