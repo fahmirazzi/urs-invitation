@@ -133,13 +133,13 @@ const guests = [
   },
   {
     id: "cpp023",
-    name: "Hafiz PDAM",
+    name: "Ahmad Noer Hafidzzein",
     family: "Groom",
     association: "Teman PDAM",
   },
   {
     id: "cpp024",
-    name: "Ridwansyah PDAM",
+    name: "Ridwansyah",
     family: "Groom",
     association: "Teman PDAM",
   },
