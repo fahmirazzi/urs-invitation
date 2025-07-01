@@ -996,6 +996,18 @@ const guests = [
     association: "Teman Sifa",
   },
   {
+    id: "cpp167",
+    name: "Ibu Devi Apriyanti",
+    family: "Groom",
+    association: "Teman Apa",
+  },
+  {
+    id: "cpp168",
+    name: "Nessia Rachmanda Pratiwi",
+    family: "Groom",
+    association: "Teman Apa",
+  },
+  {
     id: "cpw001",
     name: "Keluarga Besar Achmad Roedja'i",
     family: "Bride",
