@@ -1027,6 +1027,42 @@ const guests = [
     association: "Teman Umi",
   },
   {
+    id: "cpp172",
+    name: " Bapak Ajid Hidayat",
+    family: "Groom",
+    association: "Teman Umi",
+  },
+  {
+    id: "cpp173",
+    name: " Bapak Muhammad Nafis",
+    family: "Groom",
+    association: "Teman Umi",
+  },
+  {
+    id: "cpp174",
+    name: " Ibu Makiyyah",
+    family: "Groom",
+    association: "Teman Umi",
+  },
+  {
+    id: "cpp175",
+    name: " Bapak Munadi",
+    family: "Groom",
+    association: "Teman Umi",
+  },
+  {
+    id: "cpp176",
+    name: " Ibu Rosyidah",
+    family: "Groom",
+    association: "Teman Umi",
+  },
+  {
+    id: "cpp177",
+    name: " Ibu Uswanah",
+    family: "Groom",
+    association: "Teman Umi",
+  },
+  {
     id: "cpw001",
     name: "Keluarga Besar Achmad Roedja'i",
     family: "Bride",
