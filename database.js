@@ -1021,6 +1021,12 @@ const guests = [
     association: "MKS",
   },
   {
+    id: "cpp171",
+    name: " Pak Hilmi, S.E.",
+    family: "Groom",
+    association: "Teman Umi",
+  },
+  {
     id: "cpw001",
     name: "Keluarga Besar Achmad Roedja'i",
     family: "Bride",
