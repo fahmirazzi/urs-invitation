@@ -1256,6 +1256,12 @@ const guests = [
     association: "Teman PDAM",
   },
   {
+    id: "cpp210",
+    name: " Panji Santoso",
+    family: "Groom",
+    association: "Teman PDAM",
+  },
+  {
     id: "cpw001",
     name: "Keluarga Besar Achmad Roedja'i",
     family: "Bride",
