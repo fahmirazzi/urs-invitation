@@ -1123,6 +1123,48 @@ const guests = [
     association: "Teman Umi",
   },
   {
+    id: "cpp187",
+    name: " Tectona Grandis",
+    family: "Groom",
+    association: "Teman La Tansa",
+  },
+  {
+    id: "cpp188",
+    name: " Toni Ahnaf Tsani",
+    family: "Groom",
+    association: "Teman La Tansa",
+  },
+  {
+    id: "cpp189",
+    name: " Ustadz Fijarotul Akbar",
+    family: "Groom",
+    association: "Teman La Tansa",
+  },
+  {
+    id: "cpp190",
+    name: " Amirudin Abdillah Salam",
+    family: "Groom",
+    association: "Teman La Tansa",
+  },
+  {
+    id: "cpp191",
+    name: " Dewa AP",
+    family: "Groom",
+    association: "Teman La Tansa",
+  },
+  {
+    id: "cpp192",
+    name: " Agi Mukmin",
+    family: "Groom",
+    association: "Teman La Tansa",
+  },
+  {
+    id: "cpp193",
+    name: " M Syauqi Razaq",
+    family: "Groom",
+    association: "Teman La Tansa",
+  },
+  {
     id: "cpw001",
     name: "Keluarga Besar Achmad Roedja'i",
     family: "Bride",
