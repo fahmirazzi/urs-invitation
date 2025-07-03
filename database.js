@@ -1261,6 +1261,13 @@ const guests = [
     family: "Groom",
     association: "Teman PDAM",
   },
+
+  {
+    id: "cpp211",
+    name: " Oke Fadillah",
+    family: "Groom",
+    association: "Teman PDAM",
+  },
   {
     id: "cpw001",
     name: "Keluarga Besar Achmad Roedja'i",
