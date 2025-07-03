@@ -1190,7 +1190,7 @@ const guests = [
   },
   {
     id: "cpp198",
-    name: " Bu Dhevi",
+    name: " Bu Dhevi Noviyanti",
     family: "Groom",
     association: "Teman PDAM",
   },
