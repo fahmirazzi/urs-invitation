@@ -1118,7 +1118,7 @@ const guests = [
   },
   {
     id: "cpp186",
-    name: " Bapak Badru dan Ibu Latifah",
+    name: " Bapak Sulaeman Badru dan Ibu Latifah",
     family: "Groom",
     association: "Teman Umi",
   },
