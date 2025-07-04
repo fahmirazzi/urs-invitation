@@ -1269,6 +1269,36 @@ const guests = [
     association: "Teman PDAM",
   },
   {
+    id: "cpw067",
+    name: " Bu Maya Dwilestari, S.Sos",
+    family: "Bride",
+    association: "Teman kerja Fidia",
+  },
+  {
+    id: "cpw068",
+    name: " Ustadz Dr. Achmad Tito Rusady, S.S., M.Pd",
+    family: "Bride",
+    association: "Dosen IOU",
+  },
+  {
+    id: "cpw069",
+    name: " Ustadz AA Hubur, Lc., MA., MM., PhD",
+    family: "Bride",
+    association: "Dosen IOU",
+  },
+  {
+    id: "cpw070",
+    name: " Ustadz Dr. Miftakhussurur",
+    family: "Bride",
+    association: "Dosen IOU",
+  },
+  {
+    id: "cpw071",
+    name: " Ustadz Choirur Roziqin Manapsir, M.A., Ph.D.",
+    family: "Bride",
+    association: "Dosen IOU",
+  },
+  {
     id: "cpw001",
     name: "Keluarga Besar Achmad Roedja'i",
     family: "Bride",
