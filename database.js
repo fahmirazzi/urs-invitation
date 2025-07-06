@@ -1286,6 +1286,18 @@ const guests = [
     family: "Groom",
     association: "Takmier Always ON",
   },
+  {
+    id: "cpp215",
+    name: " Akhi Reza Rizky",
+    family: "Groom",
+    association: "MKS",
+  },
+  {
+    id: "cpp216",
+    name: " DKM Masjid Khidmatus Sunnah",
+    family: "Groom",
+    association: "MKS",
+  },
 
   {
     id: "cpw001",
