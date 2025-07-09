@@ -1782,7 +1782,7 @@ const guests = [
   },
   {
     id: "vip011",
-    name: " H. Deden Suqron, Sh. Mh",
+    name: " H. Deden Suqron, S.H., M.H.",
     family: "Groom",
     association: "Teman Apa",
   },
