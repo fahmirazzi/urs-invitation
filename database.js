@@ -1062,12 +1062,7 @@ const guests = [
     family: "Groom",
     association: "Teman Umi",
   },
-  {
-    id: "vip010",
-    name: " Ustadz Bukit Adhinugraha حفظه الله",
-    family: "Bride",
-    association: "",
-  },
+
   {
     id: "cpp178",
     name: " Ibu Hj. Youma Elmika Sari",
@@ -1784,5 +1779,47 @@ const guests = [
     name: "Ustadz Bukit Adhinugraha حفظه الله",
     family: "Bride",
     association: "",
+  },
+  {
+    id: "vip011",
+    name: " H. Deden Suqron, Sh. Mh",
+    family: "Groom",
+    association: "Teman Apa",
+  },
+  {
+    id: "vip012",
+    name: " H. Ahmad Damhuri",
+    family: "Groom",
+    association: "Teman Apa",
+  },
+  {
+    id: "vip013",
+    name: " Dr.  H.  Zaenal Muttaqin ( Dr. Boyke )",
+    family: "Groom",
+    association: "Teman Apa",
+  },
+  {
+    id: "vip014",
+    name: " H. Eka Wibayu",
+    family: "Groom",
+    association: "Teman Apa",
+  },
+  {
+    id: "vip015",
+    name: " Ismail Ruslan",
+    family: "Groom",
+    association: "Teman Apa",
+  },
+  {
+    id: "vip016",
+    name: " Aan Priyatna",
+    family: "Groom",
+    association: "Teman Apa",
+  },
+  {
+    id: "vip017",
+    name: " H. Endang Sule, S.E.",
+    family: "Groom",
+    association: "Teman Apa",
   },
 ];
